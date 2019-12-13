@@ -2,8 +2,8 @@ require('rspec')
 require('anagram_logic')
 
 describe('#anagram_check') do
-  it('determines if two words are anagrams') do
-    test = Anagram.new()
-    expect(test.anagram_check()).to(eq())
+  it('returns input words as lowercase strings') do
+    test = Anagram.new("RUBY", "BURY")
+    expect(test.lowercase_words("RUBY", "BURY")).to(eq("ruby"))
   end
 end

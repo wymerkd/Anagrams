@@ -34,13 +34,20 @@ class Anagram
   end
 
   def antigram_check
-    @first_word.each do |letter|
-      if (@second_word.include?(letter))
-        @is_it_antigram = "These words have letter matches."
-      else
-        @is_it_antigram = "These words have no letter matches and are antigrams."
-      end
+    antigrams = @first_word & @second_word
+    if antigrams.empty? === false
+      @is_it_antigram = "These words have letter matches."
+    else
+      @is_it_antigram = "These words have no letter matches and are antigrams."
     end
-    @is_it_antigram
+
+
+    # @first_word.each do |letter|
+    #   if (!@second_word.include?(letter))
+    #     @is_it_antigram = "These words have no letter matches and are antigrams."
+    #   else
+    #     @is_it_antigram = "These words have letter matches."
+    #   end
+    # end
   end
 end

@@ -16,7 +16,7 @@ describe('#anagram_check') do
 
   # First test for requirement 2
   it('accounts for the possibility that words might have different cases but should still be anagrams') do
-    anagram = Anagram.new("RUBY", "Burry")
+    anagram = Anagram.new("RUBY", "Bury")
     expect(anagram.anagram_check).to(eq("These words are anagrams."))
   end
 end

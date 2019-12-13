@@ -37,8 +37,14 @@ end
 
 describe('#antigram_check') do
   # First test for requirement 3
-  it('checks if two words are anagrams') do
+  it('checks if two words are antigrams') do
     anagram = Anagram.new("ruby", "hello")
     expect(anagram.antigram_check).to(eq("These words have no letter matches and are antigrams."))
+  end
+
+  # Second test for requirement 3
+  it('checks if two words have letter matches') do
+    anagram = Anagram.new("ruby", "hello")
+    expect(anagram.antigram_check).to(eq("These words have letter matches."))
   end
 end

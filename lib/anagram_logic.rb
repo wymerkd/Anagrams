@@ -36,9 +36,9 @@ class Anagram
   def antigram_check
     @first_word.each do |letter|
       if (@second_word.include?(letter))
-        @is_it_antigram = "These words have no letter matches and are antigrams."
-      else
         @is_it_antigram = "These words have letter matches."
+      else
+        @is_it_antigram = "These words have no letter matches and are antigrams."
       end
     end
     @is_it_antigram

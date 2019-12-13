@@ -5,6 +5,8 @@ class Anagram
     @first_word = first_word
     @second_word = second_word
     @is_it_anagram = ''
+    @is_it_word = ''
+    @vowels = ["a", "e", "i", "o", "u", "y"]
   end
 
   def anagram_check
@@ -16,5 +18,20 @@ class Anagram
       @is_it_anagram = "These words are not anagrams."
     end
   end
-  puts @is_it_anagram
+
+  def word_check
+    split_first_word = @first_word.split('')
+    split_second_word = @second_word.split('')
+    split_first_word.each do |vowel|
+      if (@vowels.include?(vowel))
+        split_second_word.each do |vowel|
+          if (@vowels.include?(vowel))
+            @is_it_word = "These are real words."
+          end
+      else
+        @is_it_word = "You need to input actual words!"
+      end
+    end
+    @is_it_word
+  end
 end

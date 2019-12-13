@@ -10,6 +10,7 @@ class Anagram
     @vowels = ["a", "e", "i", "o", "u", "y"]
   end
 
+#Checks if both first_word and second_word arrays are equal to determine if anagram
   def anagram_check
     if @first_word == @second_word
       @is_it_anagram = "These words are anagrams."
@@ -18,6 +19,7 @@ class Anagram
     end
   end
 
+#Checks if first_word array contains vowels, if it does, it checks second_word array for vowels.
   def word_check
     @first_word.each do |vowel|
       if (@vowels.include?(vowel))

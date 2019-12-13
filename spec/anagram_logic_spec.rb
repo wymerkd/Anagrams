@@ -47,4 +47,9 @@ describe('#antigram_check') do
     anagram = Anagram.new("ruby", "bury")
     expect(anagram.antigram_check).to(eq("These words have letter matches."))
   end
+
+  it('checks if two phrases are anagrams') do
+    anagram = Anagram.new("ruby", "bury")
+    expect(anagram.antigram_check).to(eq("These words are anagrams."))
+  end
 end

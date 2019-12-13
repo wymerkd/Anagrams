@@ -42,9 +42,9 @@ describe('#antigram_check') do
     expect(anagram.antigram_check).to(eq("These words have no letter matches and are antigrams."))
   end
 
-
+  # Second test for requirement 3
   it('checks if two words have letter matches') do
-    anagram = Anagram.new("ruby", "hello")
+    anagram = Anagram.new("ruby", "bury")
     expect(anagram.antigram_check).to(eq("These words have letter matches."))
   end
 end

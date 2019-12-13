@@ -8,7 +8,7 @@ describe('#anagram_check') do
   end
 
   it('checks if two words are not anagrams') do
-    anagram = Anagram.new("RUBY", "Bury")
+    anagram = Anagram.new("RUBY", "rubi")
     expect(anagram.anagram_check).to(eq("These words are not anagrams."))
   end
 end

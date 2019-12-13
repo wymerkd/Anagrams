@@ -6,6 +6,7 @@ class Anagram
     @second_word = second_word.downcase().split('').sort()
     @is_it_anagram = ''
     @is_it_word = ''
+    @is_it_antigram = ''
     @vowels = ["a", "e", "i", "o", "u", "y"]
   end
 
@@ -33,8 +34,13 @@ class Anagram
   end
 
   def antigram_check
-
+    @first_word.each do |letter|
+      if (@second_word.include?(letter))
+        @is_it_antigram = "These words have no letter matches and are antigrams."
+      else
+        @is_it_antigram = "These words have letter matches."
+      end
+    end
+    @is_it_antigram
   end
-
-
 end

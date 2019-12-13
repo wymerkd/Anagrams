@@ -28,6 +28,7 @@ class Anagram
           if (@vowels.include?(vowel))
             @is_it_word = "These are real words."
           end
+        end
       else
         @is_it_word = "You need to input actual words!"
       end

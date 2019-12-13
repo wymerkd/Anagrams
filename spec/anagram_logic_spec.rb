@@ -30,7 +30,7 @@ describe('#word_check') do
 
   # Second test for requirement 3
   it('checks if the inputs are not words') do
-    anagram = Anagram.new("ruby", "bury")
+    anagram = Anagram.new("ruby", "br")
     expect(anagram.word_check).to(eq("You need to input actual words!"))
   end
 end

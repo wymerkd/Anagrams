@@ -30,7 +30,7 @@ _This project demonstrates my current skills Ruby. The application runs the user
 * _Clone or download the repository from GitHub_
 * _In the terminal, run $ gem install bundler_
 * _To interact with application, in the terminal run $ chmod +x anagram_script.rb_
-* _Then run ./anagram.script.rb_
+* _Then run $ ./anagram_script.rb_
 
 ## Known Bugs
 

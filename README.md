@@ -13,16 +13,24 @@ _This project demonstrates my current skills Ruby. The application runs the user
 
 |  Behavior | Input  | Output  |
 |---|---|---|
-| Application takes a user's inputted name and returns a list of doctor's| John | List of doctor's names containing "John"|
-| Application takes a user's inputted symptom and returns a list of doctor's that can treat symptom| fever | List of doctor's that can treat a "fever"|
-| If the API call is unsuccessful, the user will be alerted.| response.ok === false| "There was an error handling your request: 401 Unauthorized"|
-| If search results do not match any doctors in the database, the user is informed.| Bob | "No doctors meet the criteria"|
+| Application checks if two words are anagrams | "ruby", "bury" | "These words are anagrams." |
+| Application checks if two words are not anagrams | "ruby", "rails" | "These words are not anagrams." |
+| Application accounts for the possibility that words might have different cases but should still be anagrams | "Ruby", "Bury" | "These words are anagrams." |
+| Application checks if two words are actual words | "ruby", "bury" | "These are real words."|
+| Application checks if two words are not actual words | "ruby", "br" | "You need to input actual words!" |
+| Application checks if two words are antigrams | "ruby", "hello" | "These words have no letter matches and are antigrams."|
+| Application checks if two words have letter matches | "ruby", "bury" | "These words have letter matches." |
+| Application checks if two phrases are anagrams| "mother-in-law?", "woman hitler!" | "These words are anagrams."|
+| Application checks if two phrases are not anagrams | "knock knock", "who's there?" | "These words are not anagrams."|
+
 
 
 ## Setup/Installation Requirements
 
 * _Clone or download the repository from GitHub_
 * _In the terminal, run $ gem install bundler_
+* _To interact with application, in the terminal run $ chmod +x anagram_script.rb_
+* _Then run ./anagram.script.rb
 
 ## Known Bugs
 

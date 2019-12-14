@@ -15,22 +15,22 @@ class Anagram
     end
   end
 
-  #Combines both first_word and vowels, then combines second_word and vowels. Checks for common occurrences.
+  #Checks for common occurrences bewteen vowels array and user inputs
   def word_check
     vowels = ["a", "e", "i", "o", "u", "y"]
-    first_vowel_check = vowels & @first_word
-    second_vowel_check = vowels & @second_word
-    if first_vowel_check.empty? === false && second_vowel_check.empty? === false
+    first_vowel_check = vowels & @first_word #holds any values that are in both vowels and @first_word
+    second_vowel_check = vowels & @second_word #holds any values that are in both vowels and @second_word
+    if first_vowel_check.empty? === false && second_vowel_check.empty? === false #checks if first_vowel_check and second_vowel_check are holding any common vowels shared between vowels and first_word / vowels and second_word
       is_it_word = "These are real words."
     else
       is_it_word = "You need to input actual words!"
     end
   end
 
-  #Combines both first_word and second_word then looks for common occurrence.
+  #Checks for common occurrences between first_word and second_word
   def antigram_check
-    antigrams = @first_word & @second_word
-    if antigrams.empty? === false
+    antigrams = @first_word & @second_word #holds any values that are in both first_word and second_word
+    if antigrams.empty? === false #checks if antigrams is holding any common occurrences between first_word and second_word
       is_it_antigram = "These words have letter matches."
     else
       is_it_antigram = "These words have no letter matches and are antigrams."

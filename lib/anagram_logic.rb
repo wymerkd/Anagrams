@@ -4,9 +4,6 @@ class Anagram
   def initialize(first_word, second_word)
     @first_word = first_word.tr(' ~!@#$%^&*()_\+{}|:<>?[]\;,./-','').downcase().split('').sort()
     @second_word = second_word.tr(' ~!@#$%^&*()_\+{}|:<>?[]\;,./-','').downcase().split('').sort()
-    # @is_it_anagram = ''
-    # @is_it_word = ''
-    # @is_it_antigram = ''
     @vowels = ["a", "e", "i", "o", "u", "y"]
   end
 

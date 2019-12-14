@@ -8,6 +8,10 @@
 
 _This project demonstrates my current skills Ruby. The application runs the user's inputs through a serious of methods to determine if they are anagrams or not._
 
+## Resources Used
+_https://irb.rocks/comparison-arrays-ruby/_
+_https://stackoverflow.com/questions/21446369/deleting-all-special-characters-from-a-string-ruby/21446469_
+_https://stackoverflow.com/questions/1634750/ruby-function-to-remove-all-white-spaces_
 
 ## Specifications
 

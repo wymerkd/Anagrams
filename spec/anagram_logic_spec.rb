@@ -56,9 +56,9 @@ describe('#anagram_check') do
    expect(anagram.anagram_check).to(eq("These words are anagrams."))
  end
 
- # First test for requirement 5
+ # Second test for requirement 5
   it('checks if two phrases are not anagrams') do
-    anagram = Anagram.new("mother-in-law?", "woman hitler!")
+    anagram = Anagram.new("knock knock", "who's there?")
     expect(anagram.anagram_check).to(eq("These words are not anagrams."))
   end
 end

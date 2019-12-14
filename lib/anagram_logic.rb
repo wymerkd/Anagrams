@@ -19,22 +19,18 @@ class Anagram
     end
   end
 
-#Checks if first_word array contains vowels, if it does, it checks second_word array for vowels.
+#Combines both first_word and vowels, then combines second_word and vowels. Checks for common occurrences.
   def word_check
-    @first_word.each do |vowel|
-      if (@vowels.include?(vowel))
-        @second_word.each do |vowel|
-          if (@vowels.include?(vowel))
-            @is_it_word = "These are real words."
-          end
-        end
-      else
-        @is_it_word = "You need to input actual words!"
-      end
+    first_vowel_check = @vowels & @first_word
+    second_vowel_check = @vowels & @second_word
+    if first_vowel_check.empty? === false && second_vowel_check.empty? === false
+      @is_it_word = "These are real words."
+    else
+    @is_it_word = "You need to input actual words!"
     end
-    @is_it_word
   end
 
+#Combines both first_word and second_word then looks for common occurrence.
   def antigram_check
     antigrams = @first_word & @second_word
     if antigrams.empty? === false
@@ -42,14 +38,5 @@ class Anagram
     else
       @is_it_antigram = "These words have no letter matches and are antigrams."
     end
-
-
-    # @first_word.each do |letter|
-    #   if (!@second_word.include?(letter))
-    #     @is_it_antigram = "These words have no letter matches and are antigrams."
-    #   else
-    #     @is_it_antigram = "These words have letter matches."
-    #   end
-    # end
   end
 end

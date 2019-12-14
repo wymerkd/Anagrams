@@ -52,7 +52,7 @@ end
 describe('#anagram_check') do
 # First test for requirement 5
  it('checks if two phrases are anagrams') do
-   anagram = Anagram.new("mother-in-law?", "women hitler!")
+   anagram = Anagram.new("mother-in-law?", "woman hitler!")
    expect(anagram.anagram_check).to(eq("These words are anagrams."))
  end
 end

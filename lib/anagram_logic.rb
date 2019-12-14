@@ -9,9 +9,9 @@ class Anagram
   #Checks if both first_word and second_word arrays are equal to determine if anagram
   def anagram_check
     if @first_word == @second_word
-      @is_it_anagram = "These words are anagrams."
+      is_it_anagram = "These words are anagrams."
     else
-      @is_it_anagram = "These words are not anagrams."
+      is_it_anagram = "These words are not anagrams."
     end
   end
 

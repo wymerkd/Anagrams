@@ -2,8 +2,8 @@ class Anagram
   attr_accessor(:first_word, :second_word)
 
   def initialize(first_word, second_word)
-    @first_word = first_word.downcase().split('').sort()
-    @second_word = second_word.downcase().split('').sort()
+    @first_word = first_word.tr(' ~!@#$%^&*()_\+{}|:<>?[]\;,./-','').downcase().split('').sort()
+    @second_word = second_word.tr(' ~!@#$%^&*()_\+{}|:<>?[]\;,./-','').downcase().split('').sort()
     @is_it_anagram = ''
     @is_it_word = ''
     @is_it_antigram = ''
